@@ -1,0 +1,23 @@
+server:
+  port: 8761
+  eureka:
+    client:
+      register-with-eureka: false
+      eureka:
+        client:
+          fetch-registry: false
+      logging:
+      level.com.netflix.eureka: OFF
+      level.com.netflix.discovery: OFF
+      spring:
+      application-name: service-registry
+      #      servlet:
+      #       context-path: /book-service
+      feign:
+        client:
+          config:
+            default:
+              connectTimeout: 5000
+              readTimeout: 5000
+              loggerLevel: basic
+              decode404: true
